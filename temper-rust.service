@@ -1,0 +1,10 @@
+[Unit]
+Description=An HTTP server and MQTT client which reports temperatures from the TEMPer device.
+
+[Service]
+ExecStart=/home/pi/temper-usb/target/release/temper-usb -h -p 81 -m -s tcp://server.internal:1883 -t loft/temperature -f 10
+Type=notify
+NotifyAccess=main
+
+[Install]
+WantedBy=multi-user.target
