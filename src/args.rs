@@ -9,8 +9,10 @@ impl Args {
     pub fn parse() -> Result<Self> {
         let inner = App::new("temper-usb")
             .version(env!("CARGO_PKG_VERSION"))
-            .about("Queries a TEMPer USB device to get temperatures.\n\
-                    If no arguments are given, prints the temperature to stdout.")
+            .about(
+                "Queries a TEMPer USB device to get temperatures.\n\
+                    If no arguments are given, prints the temperature to stdout.",
+            )
             .arg(
                 Arg::with_name("http")
                     .long("http")
