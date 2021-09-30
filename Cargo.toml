@@ -6,7 +6,7 @@ edition = "2018"
 [dependencies]
 rusb = "0.9"
 actix-web = "3"
-paho-mqtt = "0.9"
+paho-mqtt = { version = "0.9", default-features = false }
 sd-notify = "0.3"
 clap = "2.33"
 anyhow = "1.0"
