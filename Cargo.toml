@@ -10,7 +10,7 @@ paho-mqtt = "0.9"
 sd-notify = "0.3"
 clap = "2.33"
 anyhow = "1.0"
-fork = "0.1"
+futures = "0.3"
 
 [profile.release]
 lto = true
