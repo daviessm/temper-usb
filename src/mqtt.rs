@@ -35,6 +35,11 @@ impl MqttConnection {
     }
 
     pub(crate) fn send_mqtt(&self) {
+        if !self.connection.is_connected() {
+            println!("Disconnected from MQTT server! Reconnecting...");
+            self.connection.reconnect();
+        }
+
         self.connection.publish(Message::new(
             self.topic.to_owned(),
             format!("{}", self.device.lock().unwrap().get_temp()),
