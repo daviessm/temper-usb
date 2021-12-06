@@ -8,7 +8,7 @@ rusb = "0.9"
 actix-web = "3"
 paho-mqtt = "0.9"
 sd-notify = "0.3"
-clap = "2.33"
+clap = "2.34"
 anyhow = "1.0"
 futures = "0.3"
 
